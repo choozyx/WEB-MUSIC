@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>STAR MUSIC — Home</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header id="navbar"></header>
+  <aside id="sidebar"></aside>
+
+  <main class="main">
+    <section class="hero">
+      <img class="hero-img" src="img/album1.jpeg" alt="hero">
+      <div class="hero-meta">
+        <h1>Discover new music</h1>
+        <p>Daily picks & curated playlists — glass style.</p>
+        <div style="margin-top:12px;"><a class="btn" href="explore.html">Explore</a></div>
+      </div>
+    </section>
+
+    <h2 class="section-title">Featured Albums</h2>
+    <div class="card-grid">
+      <div class="album-card" data-src="media/sample1.mp3" data-cover="img/flies.png" data-title="Don't Look Back in Anger - Remastered" data-artist="Oasis">
+        <img src="img/flies.png" alt="">
+        <h4>Time Flies... 1994-2009 (Remastered)</h4>
+        <p>Oasis</p>
+      </div>
+
+      <div class="album-card" data-src="media/sample2.mp3" data-cover="img/drip.jpeg" data-title="DRIP" data-artist="BABYMONSTER">
+        <img src="img/drip.jpeg" alt="">
+        <h4>DRIP</h4>
+        <p>BABYMONSTER</p>
+      </div>
+
+      <div class="album-card" data-src="media/sample3.mp3" data-cover="img/Never.jpeg" data-title="Toronto 2014 (with Mustafa)" data-artist="Daniel Caesar, Mustafa">
+        <img src="img/Never.jpeg" alt="">
+        <h4>NEVER ENOUGH</h4>
+        <p>Daniel Caesar</p>
+      </div>
+      
+      <div class="album-card" data-src="media/sample4.mp3" data-cover="img/Untitled.jpeg" data-title="untitled 02 | 06.23.2014." data-artist="Kendrick Lamar">
+        <img src="img/Untitled.jpeg" alt="">
+        <h4>untitled unremastered.</h4>
+        <p>Kendrick Lamar</p>
+      </div>
+
+      <div class="album-card" data-src="media/sample5.mp3" data-cover="img/ruby.jpeg" data-title="ZEN" data-artist="JENNIE">
+        <img src="img/ruby.jpeg" alt="">
+        <h4>Ruby</h4>
+        <p>JENNIE</p>
+      </div>
+
+      <div class="album-card" data-src="media/sample6.mp3" data-cover="img/taylor.png" data-title="Opalite" data-artist="Taylor Swift">
+        <img src="img/taylor.png" alt="">
+        <h4>The Life of a Showgirl</h4>
+        <p>Taylor Swift</p>
+      </div>
+
+      <div class="album-card" data-src="media/sample7.mp3" data-cover="img/goodkid.jpeg" data-title="Money Trees" data-artist="Kendrick Lamar">
+        <img src="img/goodkid.jpeg" alt="">
+        <h4>good kid, m.A.A.d city (Deluxe)</h4>
+        <p>Kendrick Lamar</p>
+      </div>
+
+      <div class="album-card" data-src="media/sample8.mp3" data-cover="img/lisa.png" data-title="New Woman (feat. ROSALÍA)" data-artist="LISA, ROSALÍA">
+        <img src="img/lisa.png" alt="">
+        <h4>Alter Ego</h4>
+        <p>LISA</p>
+      </div>
+
+      <div class="album-card" data-src="media/sample9.mp3" data-cover="img/rosie.png" data-title="toxix till the end" data-artist="ROSÉ">
+        <img src="img/rosie.png" alt="">
+        <h4>rosie</h4>
+        <p>ROSÉ</p>
+      </div>
+
+      <div class="album-card" data-src="media/sample10.mp3" data-cover="img/oasis.jpeg" data-title="Married With Children" data-artist="Oasis">
+        <img src="img/oasis.jpeg" alt="">
+        <h4>Definetely Maybe</h4>
+        <p>Oasis</p>
+      </div>
+
+      <div class="album-card" data-src="media/sample11.mp3" data-cover="img/blonde.jpeg" data-title="Ivy" data-artist="Frank Ocean">
+        <img src="img/blonde.jpeg" alt="">
+        <h4>Blonde</h4>
+        <p>Frank Ocean</p>
+      </div>
+
+      <div class="album-card" data-src="media/sample12.mp3" data-cover="img/jackboys.jpg" data-title="CHAMPAIN & VACAY" data-artist="JACKBOYS, Travis Scott">
+        <img src="img/jackboys.jpg" alt="">
+        <h4>JACKBOYS 2</h4>
+        <p>JACKBOYS  · Travis Scott</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- persistent player -->
+  <footer class="player" id="mini-player">
+    <div class="player-left">
+      <img id="mini-cover" src="img/hotsauce.jpeg" alt="cover">
+      <div> 
+        <div id="mini-title">HOT SAUCE</div>
+        <small id="mini-artist">BABYMONSTER</small>
+      </div>
+    </div>
+
+    <div class="player-center">
+      <button id="prev">⏮</button>
+      <button id="play">▶</button>
+      <button id="next">⏭</button>
+      <input id="seek" type="range" min="0" max="100" value="0">
+    </div>
+
+    <div class="player-right">
+      <input id="volume" type="range" min="0" max="1" step="0.01" value="0.8">
+    </div>
+  </footer>
+
+  <audio id="audio"></audio>
+
+  <script src="js/ui.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

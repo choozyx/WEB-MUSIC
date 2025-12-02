@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>STAR MUSIC — Player</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header id="navbar"></header>
+  <aside id="sidebar"></aside>
+
+  <main class="main">
+    <div class="player-full glass" data-src="media/sample13.mp3" data-cover="img/hotsauce.jpeg" data-title="HOT SAUCE" data-artist="BABYMONSTER">
+      <button onclick="history.back()" style="position:absolute;left:18px;top:86px;border:0;background:none;color:var(--white);font-size:20px;cursor:pointer;">✕</button>
+      <img id="full-cover" class="full-cover" src="img/hotsauce.jpeg" alt="cover">
+      <h2 id="full-title">HOT SAUCE</h2>
+      <p id="full-artist">BABYMONSTER</p>
+
+      <div class="controls" style="justify-content:center;">
+        <button id="full-prev">⏮</button>
+        <button id="full-play">▶</button>
+        <button id="full-next">⏭</button>
+      </div>
+
+      <input id="full-seek" type="range" min="0" max="100" value="0" style="width:100%;margin-top:10px;">
+      <div style="display:flex;justify-content:space-between;margin-top:8px;color:var(--muted);">
+        <span id="time-now">0:00</span><span id="time-total">0:00</span>
+      </div>
+    </div>
+  </main>
+
+  <audio id="audio"></audio>
+
+  <script src="js/ui.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,396 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+:root {
+  --bg1: #0b0f14;
+  --glass-1: rgba(255, 255, 255, 0.06);
+  --glass-2: rgba(255, 255, 255, 0.10);
+  --muted: #b6c2cb;
+  --accent: #6ad3ff;
+  --white: #eef7ff;
+}
+
+html,
+body {
+  height: 100%;
+  background: linear-gradient(135deg, #05060a, #0f1720); /*--Set background website gradasi gelap.--*/
+  color: var(--white); /*--Set warna teks default, Set warna teks default = putih kebiruan..--*/
+}
+
+/* ---------- SIDEBAR ---------- */
+aside {
+  position: fixed; /*--Sidebar selalu muncul di kiri, tidak bergerak saat di-scroll.--*/
+  top: 0;
+  left: 0;
+  width: 230px;
+  height: 100vh;
+  padding: 22px;
+  background: var(--glass-1);
+  backdrop-filter: blur(20px);
+  border-right: 1px solid rgba(255, 255, 255, 0.06);
+  z-index: 99999;
+}
+
+aside .brand {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+aside .brand img {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+aside a {
+  display: block;
+  color: var(--muted);
+  text-decoration: none;
+  padding: 10px 6px;
+  border-radius: 10px;
+  transition: .18s;
+}
+
+aside a:hover {
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--white);
+}
+
+/* ---------- NAVBAR ---------- */
+header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+  z-index: 20;
+}
+
+header .logo {
+  font-weight: 700;
+  letter-spacing: .4px;
+}
+
+header .nav-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+header .search {
+  padding: 8px 12px;
+  border-radius: 12px;
+  border: 0;
+  background: rgba(0, 0, 0, 0.25);
+  color: var(--white);
+}
+
+/* ---------- MAIN ---------- */
+/*--Konten utama website, di sebelah kanan sidebar.Semua konten artist tampil di area ini..--*/
+.main {
+  margin-left: 230px;
+  margin-top: 78px;
+  padding: 28px;
+  padding-bottom: 140px;
+  max-width: 1200px;
+}
+
+.section-title {
+  font-size: 1.6rem;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+/* ---------- GRID & CARDS ---------- */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 20px;
+}
+
+.album-card {
+  background: var(--glass-1);
+  padding: 12px;
+  border-radius: 14px;
+  transition: transform .28s, box-shadow .28s;
+  cursor: pointer;
+  backdrop-filter: blur(14px);
+}
+
+.album-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform .35s;
+}
+
+.album-card h4 {
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+.album-card p {
+  color: var(--muted); /*muted warna abu abu*/
+  font-size: .9rem;
+  margin-top: 4px;
+}
+
+.album-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6);
+}
+
+.album-card:hover img {
+  transform: scale(1.05);
+}
+
+/* ---------- HERO ---------- */
+.hero {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  padding: 18px;
+  border-radius: 14px;
+  background: var(--glass-2);
+  backdrop-filter: blur(18px);
+}
+
+.hero .hero-img {
+  width: 280px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+}
+
+.hero .hero-meta h1 {
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+}
+
+/* ---------- ARTIST / TRACK LIST ---------- */
+.artist-hero { /*Menampilkan foto artist di kiri + nama & genre di kanan.*/
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+.artist-photo {
+  width: 140px;
+  height: 140px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.track-list {
+  list-style: none;
+  padding: 0;
+}
+
+/* ---------- AUTH untuk login dan register ---------- */
+.auth-box {
+  width: 360px;
+  margin: 40px auto;
+  padding: 22px;
+  border-radius: 14px;
+  background: var(--glass-2);
+  backdrop-filter: blur(18px);
+}
+
+.auth-box input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 12px;
+  border-radius: 10px;
+  border: 0;
+  background: rgba(0, 0, 0, 0.25);
+  color: var(--white);
+}
+
+.auth-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 16px;
+  border-radius: 10px;
+  border: 0;
+  background: var(--accent);
+  color: #021018;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* ---------- PERSISTENT PLAYER ---------- */
+.player {
+  position: fixed;
+  bottom: 0;
+  left: 230px;
+  width: calc(100% - 230px);
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 20px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(22px);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  z-index: 99999 !important;
+}
+
+.player-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.player-left img {
+  width: 72px;
+  height: 72px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.player-center {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.player-center button {
+  border: 0;
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--white);
+  font-size: 18px;
+  padding: 8px 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.player-center button:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+#seek {
+  width: 260px;
+}
+
+.player-right input {
+  width: 120px;
+}
+
+/* ---------- FULL PLAYER ---------- */
+.player-full {
+  max-width: 980px;
+  margin: 80px auto;
+  padding: 28px;
+  text-align: center;
+  background: var(--glass-2);
+  border-radius: 14px;
+  backdrop-filter: blur(18px);
+}
+
+.full-cover {
+  width: 320px;
+  height: 320px;
+  border-radius: 12px;
+  object-fit: cover;
+  margin: 0 auto 18px;
+}
+
+/* ---------- RESPONSIVE ---------- */
+/* Tablet */
+@media (max-width: 1000px) {
+  aside {
+    width: 190px;
+  }
+
+  .main {
+    margin-left: 190px;
+    padding: 22px;
+  }
+
+  #seek {
+    width: 200px;
+  }
+
+  .player-left img {
+    width: 64px;
+    height: 64px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 680px) {
+  aside {
+    position: fixed;
+    bottom: 0;
+    top: unset;
+    width: 100%;
+    height: 60px;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 9;
+  }
+
+  aside a {
+    padding: 6px;
+    font-size: 12px;
+  }
+
+  .main {
+    margin-left: 0;
+    margin-top: 78px;
+    padding: 18px;
+    padding-bottom: 160px;
+  }
+
+  .player {
+    bottom: 60px;
+    height: 84px;
+  }
+
+  #seek {
+    width: 160px;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  }
+}
+
+/* Small phones */
+@media (max-width: 420px) {
+  .section-title {
+    font-size: 1.4rem;
+  }
+
+  .hero .hero-img {
+    display: none;
+  }
+
+  .auth-box {
+    width: 92%;
+    margin-top: 36px;
+  }
+
+  #seek {
+    width: 120px;
+  }
+}
